@@ -1,0 +1,9 @@
+server:
+  host: "localhost"
+  port: "8080"
+
+client:
+  json_data: numbers.json
+
+logging: "info"
+logging_name: "Websocket add"

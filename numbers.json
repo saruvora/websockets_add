@@ -1,0 +1,27 @@
+[
+  {
+    "num1": 5,
+    "num2": 3,
+    "operation": "add"
+  },
+  {
+    "num1": 4,
+    "num2": 2,
+    "operation": "add"
+  },
+  {
+    "num1": 100.12,
+    "num2": 233.34,
+    "operation": "add"
+  },
+  {
+    "num1": 100,
+    "num2": 300,
+    "operation": "nan"
+  },
+  {
+    "num1": "100",
+    "num2": 233,
+    "operation": "add"
+  }
+]
