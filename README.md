@@ -16,33 +16,33 @@ This is a web socket for server and client full-duplex communication to add 2 nu
 
 # Requirements
 This should be taken care by the pyproject.toml file.
-''' 
+```
 requires-python = ">=3.13"
 dependencies = [
     "aiofiles>=25.1.0",
     "pyyaml>=6.0.3",
     "websockets>=15.0.1",
 ]
-'''
+```
 
 ## 1. Create virtual environment 
-'''
+```
 uv venv
-'''
+```
 
 ## 2. Activate the environment
 
 ### Linux/macOS:
-'''
+```
 source .venv/bin/activate
-'''
+```
 
 ### Windows
-'''
+```
 .venv\Scripts\Activate.ps1
-'''
+```
 
 ## 3. Install Dependencies 
-'''
+```
 uv sync
-'''
+```
