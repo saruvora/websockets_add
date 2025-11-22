@@ -13,7 +13,8 @@ class MathWebSocketServer():
     async def handler(self, websocket: any) -> None:
         """ This will handle the input from client and process the data
         for the required math operation """
-        
+        self.logger.info("Server started !!")
+
         try:
             async for message in websocket:
                 self.logger.info("Mesage start: %s", message)
@@ -21,6 +22,8 @@ class MathWebSocketServer():
                 operation = json_data.get("operation").lower()
                 num1 = json_data.get("num1")
                 num2 = json_data.get("num2")
+                
+                self.logger.debug("server handler got data from client {num1} and {num2} for {operation}")
 
                 if isinstance(num1, (int, float)) and isinstance(num2, (int, float)):
                     if operation == "add":
@@ -46,7 +49,6 @@ class MathWebSocketServer():
         )
         
         await self.server.serve_forever()
-        self.logger.info("Server started !!")
 
     async def destroy(self) -> None:
         """ Kill/Close/Destroy the connection to the server """
@@ -65,5 +67,3 @@ class MathWebSocketServer():
     def _add(self, num1: int, num2: int) -> int:
         """ Math operation to add 2 numbers """
         return num1 + num2
-
-
